@@ -1,0 +1,343 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+FMSPackingList
+</name>
+</assembly>
+<members>
+<member name="T:FMSPackingList.My.MyWpfExtension">
+ <summary>
+ Module used to define the properties that are available in the My Namespace for WPF
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="P:FMSPackingList.My.MyWpfExtension.Application">
+ <summary>
+ Returns the application object for the running application
+ </summary>
+</member>
+<member name="P:FMSPackingList.My.MyWpfExtension.Computer">
+ <summary>
+ Returns information about the host computer.
+ </summary>
+</member>
+<member name="P:FMSPackingList.My.MyWpfExtension.User">
+ <summary>
+ Returns information for the current user.  If you wish to run the application with the current 
+ Windows user credentials, call My.User.InitializeWithWindowsUser().
+ </summary>
+</member>
+<member name="P:FMSPackingList.My.MyWpfExtension.Log">
+ <summary>
+ Returns the application log. The listeners can be configured by the application's configuration file.
+ </summary>
+</member>
+<member name="P:FMSPackingList.My.MyWpfExtension.Windows">
+ <summary>
+ Returns the collection of Windows defined in the project.
+ </summary>
+</member>
+<member name="T:FMSPackingList.My.Resources.Resources">
+<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+<member name="P:FMSPackingList.My.Resources.Resources.ResourceManager">
+<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member>
+<member name="P:FMSPackingList.My.Resources.Resources.Culture">
+<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member>
+<member name="T:FMSPackingList.FrmLOGIN">
+<summary>
+FrmLOGIN
+</summary>
+</member>
+<member name="F:FMSPackingList.FrmLOGIN._txtLOGIN_USERID">
+<summary>
+txtLOGIN_USERID Name Field
+</summary>
+</member>
+<member name="F:FMSPackingList.FrmLOGIN._txtLOGIN_PASSWORD">
+<summary>
+txtLOGIN_PASSWORD Name Field
+</summary>
+</member>
+<member name="F:FMSPackingList.FrmLOGIN._txtLOGIN_Company">
+<summary>
+txtLOGIN_Company Name Field
+</summary>
+</member>
+<member name="F:FMSPackingList.FrmLOGIN._txtLOGIN_SESSION">
+<summary>
+txtLOGIN_SESSION Name Field
+</summary>
+</member>
+<member name="M:FMSPackingList.FrmLOGIN.InitializeComponent">
+<summary>
+InitializeComponent
+</summary>
+</member>
+<member name="T:FMSPackingList.FrmPrintPopup">
+<summary>
+FrmPrintPopup
+</summary>
+</member>
+<member name="M:FMSPackingList.FrmPrintPopup.InitializeComponent">
+<summary>
+InitializeComponent
+</summary>
+</member>
+<member name="T:FMSPackingList.FrmSearchBrowseEX">
+<summary>
+FrmSearchBrowseEX
+</summary>
+</member>
+<member name="M:FMSPackingList.FrmSearchBrowseEX.InitializeComponent">
+<summary>
+InitializeComponent
+</summary>
+</member>
+<member name="T:FMSPackingList.FrmSearchPrintPop">
+<summary>
+FrmSearchPrintPop
+</summary>
+</member>
+<member name="M:FMSPackingList.FrmSearchPrintPop.InitializeComponent">
+<summary>
+InitializeComponent
+</summary>
+</member>
+<member name="T:FMSPackingList.FrmAuthor">
+<summary>
+FrmAuthor
+</summary>
+</member>
+<member name="M:FMSPackingList.FrmAuthor.InitializeComponent">
+<summary>
+InitializeComponent
+</summary>
+</member>
+<member name="T:FMSPackingList.FrmSearchAuthor">
+<summary>
+FrmSearchAuthor
+</summary>
+</member>
+<member name="M:FMSPackingList.FrmSearchAuthor.InitializeComponent">
+<summary>
+InitializeComponent
+</summary>
+</member>
+<member name="T:FMSPackingList.FrmSearchDB">
+<summary>
+FrmSearchDB
+</summary>
+</member>
+<member name="M:FMSPackingList.FrmSearchDB.InitializeComponent">
+<summary>
+InitializeComponent
+</summary>
+</member>
+<member name="T:FMSPackingList.FrmSearchInsert">
+<summary>
+FrmSearchInsert
+</summary>
+</member>
+<member name="M:FMSPackingList.FrmSearchInsert.InitializeComponent">
+<summary>
+InitializeComponent
+</summary>
+</member>
+<member name="T:FMSPackingList.FrmSearchMain">
+<summary>
+FrmSearchMain
+</summary>
+</member>
+<member name="M:FMSPackingList.FrmSearchMain.InitializeComponent">
+<summary>
+InitializeComponent
+</summary>
+</member>
+<member name="T:FMSPackingList.Application">
+<summary>
+Application
+</summary>
+</member>
+<member name="M:FMSPackingList.Application.InitializeComponent">
+<summary>
+InitializeComponent
+</summary>
+</member>
+<member name="M:FMSPackingList.Application.Main">
+<summary>
+Application Entry Point.
+</summary>
+</member>
+<member name="T:FMSPackingList.EncryptDecrypt_Class">
+ <summary>
+ Summary description for SSTCryptographer
+ </summary>
+</member>
+<member name="M:FMSPackingList.EncryptDecrypt_Class.Encrypt(System.String)">
+ <summary>
+ Encrypt the given string using the default key.
+ </summary>
+ <param name="strToEncrypt">The string to be encrypted.</param>
+ <returns>The encrypted string.</returns>
+</member>
+<member name="M:FMSPackingList.EncryptDecrypt_Class.Decrypt(System.String)">
+ <summary>
+ Decrypt the given string using the default key.
+ </summary>
+ <param name="strEncrypted">The string to be decrypted.</param>
+ <returns>The decrypted string.</returns>
+</member>
+<member name="M:FMSPackingList.EncryptDecrypt_Class.Encrypt(System.String,System.String)">
+ <summary>
+ Encrypt the given string using the specified key.
+ </summary>
+ <param name="strToEncrypt">The string to be encrypted.</param>
+ <param name="strKey">The encryption key.</param>
+ <returns>The encrypted string.</returns>
+</member>
+<member name="M:FMSPackingList.EncryptDecrypt_Class.Decrypt(System.String,System.String)">
+ <summary>
+ Decrypt the given string using the specified key.
+ </summary>
+ <param name="strEncrypted">The string to be decrypted.</param>
+ <param name="strKey">The decryption key.</param>
+ <returns>The decrypted string.</returns>
+</member>
+<member name="T:FMSPackingList.FrmBrowseEx">
+<summary>
+FrmBrowseEx
+</summary>
+</member>
+<member name="M:FMSPackingList.FrmBrowseEx.InitializeComponent">
+<summary>
+InitializeComponent
+</summary>
+</member>
+<member name="T:FMSPackingList.FrmBrowseIm">
+<summary>
+FrmBrowseIm
+</summary>
+</member>
+<member name="M:FMSPackingList.FrmBrowseIm.InitializeComponent">
+<summary>
+InitializeComponent
+</summary>
+</member>
+<member name="T:FMSPackingList.FrmDbSetup">
+<summary>
+FrmDbSetup
+</summary>
+</member>
+<member name="F:FMSPackingList.FrmDbSetup._Acc_Company">
+<summary>
+Acc_Company Name Field
+</summary>
+</member>
+<member name="F:FMSPackingList.FrmDbSetup._Acc_version">
+<summary>
+Acc_version Name Field
+</summary>
+</member>
+<member name="F:FMSPackingList.FrmDbSetup._Acc_UserID">
+<summary>
+Acc_UserID Name Field
+</summary>
+</member>
+<member name="F:FMSPackingList.FrmDbSetup._Acc_Password">
+<summary>
+Acc_Password Name Field
+</summary>
+</member>
+<member name="F:FMSPackingList.FrmDbSetup._txtServer">
+<summary>
+txtServer Name Field
+</summary>
+</member>
+<member name="F:FMSPackingList.FrmDbSetup._txtDB">
+<summary>
+txtDB Name Field
+</summary>
+</member>
+<member name="F:FMSPackingList.FrmDbSetup._txtUser">
+<summary>
+txtUser Name Field
+</summary>
+</member>
+<member name="F:FMSPackingList.FrmDbSetup._txtImportPath">
+<summary>
+txtImportPath Name Field
+</summary>
+</member>
+<member name="F:FMSPackingList.FrmDbSetup._txtExportPath">
+<summary>
+txtExportPath Name Field
+</summary>
+</member>
+<member name="F:FMSPackingList.FrmDbSetup._txtDBID">
+<summary>
+txtDBID Name Field
+</summary>
+</member>
+<member name="F:FMSPackingList.FrmDbSetup._Acc_CompNAME">
+<summary>
+Acc_CompNAME Name Field
+</summary>
+</member>
+<member name="M:FMSPackingList.FrmDbSetup.InitializeComponent">
+<summary>
+InitializeComponent
+</summary>
+</member>
+<member name="T:FMSPackingList.FrmSearchMaster">
+<summary>
+FrmSearchMaster
+</summary>
+</member>
+<member name="M:FMSPackingList.FrmSearchMaster.InitializeComponent">
+<summary>
+InitializeComponent
+</summary>
+</member>
+<member name="T:FMSPackingList.FrmMain">
+<summary>
+FrmMain
+</summary>
+</member>
+<member name="M:FMSPackingList.FrmMain.InitializeComponent">
+<summary>
+InitializeComponent
+</summary>
+</member>
+<member name="T:FMSPackingList.FrmMasterItem">
+<summary>
+FrmMasterItem
+</summary>
+</member>
+<member name="M:FMSPackingList.FrmMasterItem.InitializeComponent">
+<summary>
+InitializeComponent
+</summary>
+</member>
+<member name="T:FMSPackingList.MainWindow">
+<summary>
+MainWindow
+</summary>
+</member>
+<member name="M:FMSPackingList.MainWindow.InitializeComponent">
+<summary>
+InitializeComponent
+</summary>
+</member>
+</members>
+</doc>

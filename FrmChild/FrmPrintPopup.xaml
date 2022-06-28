@@ -1,0 +1,25 @@
+﻿<Window x:Class="FrmPrintPopup"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FMSPackingList"
+        mc:Ignorable="d"
+        Title="Print" Height="200" Width="500" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Button x:Name="BTNMAIN_PRINT" Content="Print" HorizontalAlignment="Left" Height="40" Margin="338,95,0,0" VerticalAlignment="Top" Width="100" FontSize="18" RenderTransformOrigin="0.5,0.5"/>
+        <Label x:Name="label3" HorizontalAlignment="Left" Margin="16,14,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="14" Foreground="#FF0B289D" RenderTransformOrigin="-0.175,-0.375" Height="34" Width="144" Background="Transparent" Content="Used Packing List : "/>
+        <TextBox x:Name="txtPrintBROWSEEX" HorizontalAlignment="Left" Height="22" Margin="19,44,0,0"  VerticalAlignment="Top" Width="419" BorderBrush="#FF0B44ED" Foreground="Black" Background="White"/>
+        <Image x:Name="BTNMASTER_SEARCHEX" HorizontalAlignment="Right" Height="22" Margin="0,44,9.6,0" VerticalAlignment="Top" Width="25" Source="/FMSPackingList;component/Icon/folder (1).png" RenderTransformOrigin="0.461,0.41"/>
+        <Label x:Name="label3_Copy4" HorizontalAlignment="Left" Margin="19,122,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="14" Foreground="#FF0B289D" RenderTransformOrigin="-0.175,-0.375" Height="34" Width="79" Background="Transparent" Content="Sort To"/>
+        <TextBox x:Name="txtPrint_To" HorizontalAlignment="Left" Height="22" Margin="103,128,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="162" BorderBrush="#FF0B44ED" Foreground="Black" Background="White" />
+        <Label x:Name="label3_Copy7" HorizontalAlignment="Left" Margin="19,83,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="14" Foreground="#FF0B289D" RenderTransformOrigin="-0.175,-0.375" Height="34" Width="84" Background="Transparent" Content="Sort From"/>
+        <TextBox x:Name="txtPrint_From" HorizontalAlignment="Left" Height="22" Margin="103,88,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="162" BorderBrush="#FF0B44ED" Foreground="Black" Background="White"/>
+        <Image x:Name="BTNPRINT_SEARCHFROM" HorizontalAlignment="Right" Height="22" Margin="0,88,198.6,0" VerticalAlignment="Top" Width="25" Source="/FMSPackingList;component/Icon/icons8-search-90.png" RenderTransformOrigin="0.461,0.41"/>
+        <Image x:Name="BTNPRINT_SEARCHTO" HorizontalAlignment="Right" Height="22" Margin="0,128,198.6,0" VerticalAlignment="Top" Width="25" Source="/FMSPackingList;component/Icon/icons8-search-90.png" RenderTransformOrigin="0.461,0.41"/>
+
+    </Grid>
+</Window>

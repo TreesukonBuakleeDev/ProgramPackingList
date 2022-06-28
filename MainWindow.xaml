@@ -1,0 +1,41 @@
+﻿<Window x:Class="MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+        Title="FMS Packing List" Height="821.61" Width="1500" Loaded="Window_Loaded" ScrollViewer.HorizontalScrollBarVisibility="Visible" WindowStartupLocation="CenterScreen" WindowState="Maximized" Closed="Window_Closed">
+    <Grid Margin="0,0,3,6">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="752.8" />
+
+        </Grid.RowDefinitions>
+        <DockPanel LastChildFill="False" Grid.Column="0" ScrollViewer.HorizontalScrollBarVisibility="Auto" Margin="0,0,-0.2,665.6" >
+            <DockPanel.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF0D046B" Offset="0.093"/>
+                    <GradientStop Color="#FF1401C0" Offset="1"/>
+                </LinearGradientBrush>
+            </DockPanel.Background>
+
+        </DockPanel>
+
+        <Image Height="78" VerticalAlignment="Top" Width="167" Source="Icon/FMS.png" Margin="10,10,0,0" HorizontalAlignment="Left"/>
+        <Label x:Name="label2" Content="|" HorizontalAlignment="Left" Margin="200,0,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="48" Foreground="White" Height="75"/>
+        <Label x:Name="label3" Content="Packing List" HorizontalAlignment="Left" Margin="231,0,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="48" Foreground="White" Height="75"/>
+        <DockPanel x:Name="PanelMainControl" Grid.Column="0" LastChildFill="False" Margin="231,119,32.4,0.6"  ScrollViewer.HorizontalScrollBarVisibility="Auto"/>
+        <TreeView HorizontalAlignment="Left" Height="634" Margin="10,119,0,0" VerticalAlignment="Top" Width="197">
+            <TreeViewItem Header="Cataler Warehouse" Height="614" FontSize="16" Margin="0,10,0,0" Padding="1,0,0,8">
+                <TreeViewItem Header="Packing List Master" MouseDoubleClick="TreeViewItem_MouseDoubleClick" Padding="1,0,0,8"/>
+                <TreeViewItem Header="Packing List" MouseDoubleClick="TreeViewItem_MouseDoubleClick_2" Padding="1,0,0,8"/>
+                <TreeViewItem Header="Configuration" Padding="1,0,0,8" >
+                    <TreeViewItem x:Name="Author" Header="User" Padding="1,0,0,8"/>
+                    <TreeViewItem x:Name="DBsetup" Header="Database Setup" MouseDoubleClick="TreeViewItem_MouseDoubleClick_1" Padding="1,0,0,8"/>
+                </TreeViewItem>
+            </TreeViewItem>
+        </TreeView>  
+      
+    </Grid>
+</Window>

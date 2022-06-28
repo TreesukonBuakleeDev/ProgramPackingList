@@ -1,0 +1,322 @@
+﻿<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{2AB9096E-F3F4-458D-A391-31980F29F00B}</ProjectGuid>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>FMSPackingList</RootNamespace>
+    <AssemblyName>FMSPackingList</AssemblyName>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <MyType>Custom</MyType>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <IncrementalBuild>true</IncrementalBuild>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>FMSPackingList.xml</DocumentationFile>
+    <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036,42314</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DebugSymbols>false</DebugSymbols>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <IncrementalBuild>false</IncrementalBuild>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>FMSPackingList.xml</DocumentationFile>
+    <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036,42314</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>FMSLOGO.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Windows\assembly\GAC_MSIL\CrystalDecisions.CrystalReports.Engine\10.5.3700.0__692fbea5521e1304\CrystalDecisions.CrystalReports.Engine.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Windows\assembly\GAC_MSIL\CrystalDecisions.Shared\10.5.3700.0__692fbea5521e1304\CrystalDecisions.Shared.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Windows\assembly\GAC_MSIL\CrystalDecisions.Windows.Forms\10.5.3700.0__692fbea5521e1304\CrystalDecisions.Windows.Forms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls">
+      <HintPath>..\lib\RCWPF\2021.3.914.45.Trial\Telerik.Windows.Controls.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="Application.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Class\PRINT.vb" />
+    <Compile Include="FrmChild\FrmLOGIN.xaml.vb">
+      <DependentUpon>FrmLOGIN.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FrmChild\FrmPrint.Designer.vb">
+      <DependentUpon>FrmPrint.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmChild\FrmPrint.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmChild\FrmPrintPopup.xaml.vb">
+      <DependentUpon>FrmPrintPopup.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FrmChild\FrmSearchBrowseEX.xaml.vb">
+      <DependentUpon>FrmSearchBrowseEX.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FrmChild\FrmSearchPrintPop.xaml.vb">
+      <DependentUpon>FrmSearchPrintPop.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FrmConfig\FrmAuthor.xaml.vb">
+      <DependentUpon>FrmAuthor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FrmConfig\FrmSearchAuthor.xaml.vb">
+      <DependentUpon>FrmSearchAuthor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FrmConfig\FrmSearchDB.xaml.vb">
+      <DependentUpon>FrmSearchDB.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMain\FrmSearchInsert.xaml.vb">
+      <DependentUpon>FrmSearchInsert.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMain\FrmSearchMain.xaml.vb">
+      <DependentUpon>FrmSearchMain.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PROCESS.vb" />
+    <Page Include="FrmChild\FrmBrowseEx.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FrmChild\FrmBrowseIm.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FrmChild\FrmLOGIN.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FrmChild\FrmPrintPopup.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FrmChild\FrmSearchBrowseEX.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FrmChild\FrmSearchPrintPop.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FrmConfig\FrmAuthor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FrmConfig\FrmDbSetup.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FrmConfig\FrmSearchAuthor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FrmConfig\FrmSearchDB.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FrmConfig\FrmSearchMaster.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FrmMain\FrmMain.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FrmMain\FrmMasterItem.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FrmMain\FrmSearchInsert.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FrmMain\FrmSearchMain.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="Application.xaml.vb">
+      <DependentUpon>Application.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Class\Connection.vb" />
+    <Compile Include="Class\DataClass.vb" />
+    <Compile Include="Class\EncryptDecrypt_Class.vb" />
+    <Compile Include="Class\MASTER.vb" />
+    <Compile Include="FrmChild\FrmBrowseEx.xaml.vb">
+      <DependentUpon>FrmBrowseEx.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FrmChild\FrmBrowseIm.xaml.vb">
+      <DependentUpon>FrmBrowseIm.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FrmConfig\FrmDbSetup.xaml.vb">
+      <DependentUpon>FrmDbSetup.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FrmConfig\FrmSearchMaster.xaml.vb">
+      <DependentUpon>FrmSearchMaster.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMain\FrmMain.xaml.vb">
+      <DependentUpon>FrmMain.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMain\FrmMasterItem.xaml.vb">
+      <DependentUpon>FrmMasterItem.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainWindow.xaml.vb">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows" />
+    <Import Include="System.Windows.Controls" />
+    <Import Include="System.Windows.Data" />
+    <Import Include="System.Windows.Documents" />
+    <Import Include="System.Windows.Input" />
+    <Import Include="System.Windows.Shapes" />
+    <Import Include="System.Windows.Media" />
+    <Import Include="System.Windows.Media.Imaging" />
+    <Import Include="System.Windows.Navigation" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="My Project\AssemblyInfo.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="My Project\MyExtensions\MyWpfExtension.vb">
+      <VBMyExtensionTemplateID>Microsoft.VisualBasic.WPF.MyExtension</VBMyExtensionTemplateID>
+      <VBMyExtensionTemplateVersion>1.0.0.0</VBMyExtensionTemplateVersion>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="FrmChild\FrmPrint.resx">
+      <DependentUpon>FrmPrint.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+    </EmbeddedResource>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <AppDesigner Include="My Project\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icon\icons8-search-90.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icon\FMS.png" />
+    <Resource Include="Icon\import %281%29.png" />
+    <Resource Include="Icon\question.png" />
+    <Resource Include="Icon\server.png" />
+    <Resource Include="Icon\to-do-list.png" />
+    <Resource Include="Icon\user %282%29.png" />
+    <Resource Include="Icon\user %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icon\next %281%29.png" />
+    <Resource Include="Icon\next.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icon\right-arrow %281%29.png" />
+    <Resource Include="Icon\right-arrow %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icon\right-arrow %283%29.png" />
+    <Resource Include="Icon\right-arrow %284%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icon\next %282%29.png" />
+    <Resource Include="Icon\next %283%29.png" />
+    <Resource Include="Icon\right-arrow %285%29.png" />
+    <Resource Include="Icon\right-arrow %286%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icon\add-folder.png" />
+    <Resource Include="Icon\folder %281%29.png" />
+    <Resource Include="Icon\folder.png" />
+    <Resource Include="Icon\folders.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="FMSFMS.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="FMSLOGO.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="System\Windows\Forms\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+</Project>

@@ -1,0 +1,86 @@
+﻿<Window x:Class="FrmBrowseEx"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FMSPackingList"
+        mc:Ignorable="d"
+        Title="Export Master Item" Height="200" Width="500" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" Topmost="True">
+
+    <Window.Resources>
+        <Style x:Key="ButtonFocusVisual">
+            <Setter Property="Control.Template">
+                <Setter.Value>
+                    <ControlTemplate>
+                        <Rectangle Margin="2" SnapsToDevicePixels="true" Stroke="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}" StrokeThickness="1" StrokeDashArray="1 2"/>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <LinearGradientBrush x:Key="ButtonNormalBackground" EndPoint="0,1" StartPoint="0,0">
+            <GradientStop Color="#F3F3F3" Offset="0"/>
+            <GradientStop Color="#EBEBEB" Offset="0.5"/>
+            <GradientStop Color="#DDDDDD" Offset="0.5"/>
+            <GradientStop Color="#CDCDCD" Offset="1"/>
+        </LinearGradientBrush>
+        <SolidColorBrush x:Key="ButtonNormalBorder" Color="#FF707070"/>
+        <Style x:Key="ToggleButtonStyle1" TargetType="{x:Type ToggleButton}">
+            <Setter Property="FocusVisualStyle" Value="{StaticResource ButtonFocusVisual}"/>
+            <Setter Property="Background" Value="{StaticResource ButtonNormalBackground}"/>
+            <Setter Property="BorderBrush" Value="{StaticResource ButtonNormalBorder}"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="Padding" Value="1"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type ToggleButton}">
+                        <StackPanel Orientation="Horizontal">
+                            <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                            <Border x:Name="on" Width="25" Height="25" Background="LightGray" CornerRadius="2,0,0,4" Margin="10,0,0,0">
+                                <TextBlock x:Name="onText" Text="On" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            </Border>
+                            <Border x:Name="off" Width="25" Height="25" Background="LightGray" CornerRadius="0,2,4,0">
+                                <TextBlock x:Name="offText" Text="Off" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            </Border>
+                        </StackPanel>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsEnabled" Value="false">
+                                <Setter Property="Foreground" Value="#ADADAD"/>
+                            </Trigger>
+                            <Trigger Property="IsChecked" Value="true">
+                                <Setter TargetName="on" Property="Background" Value="LightBlue"/>
+                                <Setter TargetName="onText" Property="Foreground" Value="White"/>
+                            </Trigger>
+                            <Trigger Property="IsChecked" Value="False">
+                                <Setter TargetName="off" Property="Background" Value="LightBlue"/>
+                                <Setter TargetName="offText" Property="Foreground" Value="White"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+
+    <Grid Margin="0,0,-0.4,1.4">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Label x:Name="label3" HorizontalAlignment="Left" Margin="21,14,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="14" Foreground="#FF0B289D" RenderTransformOrigin="-0.175,-0.375" Height="34" Width="97" Background="Transparent" Content="Export Path : "/>
+        <TextBox x:Name="txtMasterBROWSEEX" HorizontalAlignment="Left" Height="22" Margin="21,43,0,0"  VerticalAlignment="Top" Width="423" BorderBrush="#FF0B44ED" Foreground="Black" Background="White" TextWrapping="Wrap" FontSize="10"/>
+        <Image x:Name="BTNMASTER_SEARCHEX" HorizontalAlignment="Right" Height="22" Margin="0,43,10.4,0" VerticalAlignment="Top" Width="25" Source="/FMSPackingList;component/Icon/folder (1).png" RenderTransformOrigin="0.461,0.41"/>
+        <Button x:Name="BTNMASTER_EX" Content="Export" HorizontalAlignment="Left" Height="40" Margin="344,95,0,0" VerticalAlignment="Top" Width="100" FontSize="18"/>
+        <Label x:Name="label3_Copy4" HorizontalAlignment="Left" Margin="19,122,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="14" Foreground="#FF0B289D" RenderTransformOrigin="-0.175,-0.375" Height="34" Width="79" Background="Transparent" Content="Item To"/>
+        <TextBox x:Name="txtMASTER_To" HorizontalAlignment="Left" Height="22" Margin="103,128,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="162" BorderBrush="#FF0B44ED" Foreground="Black" Background="White" FontSize="10"/>
+        <Label x:Name="label3_Copy7" HorizontalAlignment="Left" Margin="19,83,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="14" Foreground="#FF0B289D" RenderTransformOrigin="-0.175,-0.375" Height="34" Width="84" Background="Transparent" Content="Item From"/>
+        <TextBox x:Name="txtMASTER_From" HorizontalAlignment="Left" Height="22" Margin="103,88,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="162" BorderBrush="#FF0B44ED" Foreground="Black" Background="White" FontSize="10"/>
+        <Image x:Name="BTNMASTER_SEARCHEX_From" HorizontalAlignment="Right" Height="22" Margin="0,88,199.4,0" VerticalAlignment="Top" Width="25" Source="/FMSPackingList;component/Icon/icons8-search-90.png" RenderTransformOrigin="0.461,0.41"/>
+        <Image x:Name="BTNMASTER_SEARCHEX_To" HorizontalAlignment="Right" Height="22" Margin="0,128,199.4,0" VerticalAlignment="Top" Width="25" Source="/FMSPackingList;component/Icon/icons8-search-90.png" RenderTransformOrigin="0.461,0.41"/>
+
+        <!--<ToggleButton 
+        Content="ON LINE MODE" 
+        Style="{StaticResource ToggleButtonStyle1}" Margin="36,119,275.4,17"/>-->
+    </Grid>
+</Window>
